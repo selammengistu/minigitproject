@@ -1,3 +1,6 @@
+//Selamawit Mengistu
+//UGR/4008/16
+
 #include <iostream>
 
 //number 1
@@ -167,6 +170,7 @@ cout << "The item sold "<< n << "price is "<<price<<".\n ";
 
 
 // 12. Output all information  
+
 #include <string> 
 #define TaxRate 0.35      
 using namespace std; 
