@@ -2,6 +2,7 @@
 //UGR/4008/16
 
 #include <iostream>
+using namespace std; 
 
 //number 1
 int main() {
@@ -23,13 +24,10 @@ std::string productName = "Shoes";
 
 int newInventory = 30;
     double total_sales_amount = 14;
-    std::string inventoryStatus;
+    std::string inventoryStatus ;
     
 
 // 4. demonstrate different initialization method 
-
-using namespace std; 
-
 
 //declaration of variables 
 int a, b; 
@@ -40,10 +38,7 @@ int a, b;
 
 // 5. demonstrate different initialization method 
 
-using namespace std; 
-
- 
-//auto keyword 
+ //auto keyword 
 int totalSalesAmount = 100; 
 auto s = totalSalesAmount; 
 // decltype inventory  
@@ -52,10 +47,8 @@ decltype (Inventory) I;
 
 
 // 6. Define constants 
-#include <iostream> 
 //tax rate constant using preprocessor 
 #define taxRate 0.35; 
-using namespace std; 
 
 
 //tax rate using constant 
@@ -65,9 +58,6 @@ const double taxRate;
 
 // 7. Input from the user 
 #include <string> 
-using namespace std; 
-
-
 using std::string ; productname, productcat; 
     cout << "What's the productname? "; 
 getline (cin, productname); 
@@ -89,9 +79,7 @@ int c, p, h;
 
 
 // 8. Perform calculations 
-using namespace std; 
- 
- 
+
 int n, i=50, j=20, k=10;  
 n=i-j; 
     cout << "The new inventory amount is:  "<<n<<".\n"; 
@@ -100,10 +88,8 @@ n=i-j;
 
 
 // 9. Use a conditional (Ternary )operator 
-using namespace std; 
- 
 
-int x; 
+ int x; 
     cout << "Enter the inventory amount"; 
     cin>>x; 
     if (x < 10) 
@@ -114,9 +100,7 @@ cout << "Sufficient Inventory";
  
 
 //10. Implement flow control  
-using namespace std; 
  
-
 int e; 
 // using if  
     cout << "Product category range from 1 to 5"; 
@@ -153,14 +137,10 @@ break;
 default: 
 cout << "out of valid range"; 
 }
-    return 0; 
 
 
 //11. Use a for loop 
 
-using namespace std; 
- 
- 
 int price=10, m; 
 cout << "Enter the number of items sold\n"; 
 cin>>m; 
@@ -173,7 +153,6 @@ cout << "The item sold "<< n << "price is "<<price<<".\n ";
 
 #include <string> 
 #define TaxRate 0.35      
-using namespace std; 
  
  
     cout << "Taxe rate is "<< TaxRate << ".\n "; 

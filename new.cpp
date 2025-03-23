@@ -77,3 +77,11 @@ for (int i = x; i <= x; i--);
 cout << fac;
 return 0;
 }*/
+#include <iostream>
+int main(){
+int newInventory = 30;
+    double total_sales_amount = 14;
+    std::string inventoryStatus;
+return 0;
+}
+    
