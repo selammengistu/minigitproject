@@ -2,6 +2,7 @@
 //UGR/4008/16
 
 #include <iostream>
+#include <string>
 using namespace std; 
 
 //number 1
@@ -57,7 +58,6 @@ const double taxRate;
 
 
 // 7. Input from the user 
-#include <string> 
 using std::string ; productname, productcat; 
     cout << "What's the productname? "; 
 getline (cin, productname); 
@@ -149,9 +149,7 @@ cout << "The item sold "<< n << "price is "<<price<<".\n ";
 }
 
 
-// 12. Output all information  
-
-#include <string> 
+// 12. Output all information   
 #define TaxRate 0.35      
  
  
