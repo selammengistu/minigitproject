@@ -273,7 +273,6 @@ void diff(const std::string& hash1, const std::string& hash2) {
             std::cout << "Line " << lineNum << "\n- " << line1 << "\n+ " << line2 << "\n";
         ++lineNum;
     }
-    
     while (std::getline(f1, line1))
         std::cout << "Line " << lineNum++ << "\n- " << line1 << "\n";
     while (std::getline(f2, line2))
@@ -283,39 +282,48 @@ void diff(const std::string& hash1, const std::string& hash2) {
 
 //main
 int main() {
-    std::string command;
-    std::cout << "Enter command (init, add <filename>, commit -m <message>, log, branch <name>, checkout <name|hash>, merge <branch>, diff <hash1> <hash2>): ";
-    //tskrd input from user
-    std::cin >> command;
-    if (command == "init") init();
-    else if (command == "add") {
-        std::string filename;
-        std::cin >> filename;
-        add(filename);
-    } else if (command == "commit") {
-        std::string flag, message;
-        std::cin >> flag;
-        std::getline(std::cin, message);
-        if (flag == "-m") commit(message);
-        else std::cout << "Invalid commit format. Use: commit -m <message>\n";
-    } else if (command == "log") log();
-    else if (command == "branch") {
-        std::string name;
-        std::cin >> name;
-        branch(name);
-    } else if (command == "checkout") {
-        std::string target;
-        std::cin >> target;
-        checkout(target);
-    } else if (command == "merge") {
-        std::string name;
-        std::cin >> name;
-        merge(name);
-    } else if (command == "diff") {
-        std::string h1, h2;
-        std::cin >> h1 >> h2;
-        diff(h1, h2);
-    } else std::cout << "Unknown command.\n";
+    while (true) {
+        std::string command;
+        std::cout << "Enter command (init, add <filename>, commit -m <message>, log, branch <name>, checkout <name|hash>, merge <branch>, diff <hash1> <hash2>, exit): ";
+        std::cin >> command;
+
+        if (command == "init") {
+            init();
+        } else if (command == "add") {
+            std::string filename;
+            std::cin >> filename;
+            add(filename);
+        } else if (command == "commit") {
+            std::string flag, message;
+            std::cin >> flag;
+            std::getline(std::cin, message);
+            if (flag == "-m") commit(message);
+            else std::cout << "Invalid commit format. Use: commit -m <message>\n";
+        } else if (command == "log") {
+            log();
+        } else if (command == "branch") {
+            std::string name;
+            std::cin >> name;
+            branch(name);
+        } else if (command == "checkout") {
+            std::string target;
+            std::cin >> target;
+            checkout(target);
+        } else if (command == "merge") {
+            std::string name;
+            std::cin >> name;
+            merge(name);
+        } else if (command == "diff") {
+            std::string h1, h2;
+            std::cin >> h1 >> h2;
+            diff(h1, h2);
+        } else if (command == "exit") {
+            break;
+        } else {
+            std::cout << "Unknown command.\n";
+        }
+    }
+
     return 0;
     //calles the appropriate functions
 }
